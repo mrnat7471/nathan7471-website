@@ -1,0 +1,31 @@
+body {
+    background-color: #282828;
+    color: #FFFFFF;
+}
+.index_content {
+    background: url('./i/background.png');
+    background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    text-align: center;
+    box-shadow: 0 0 10px #1c1c1c;
+}
+.image_content {
+    text-align: center;
+    padding-top: 5%;
+}
+.social_icons i {
+    font-size: 40px;
+    padding: 5px;
+}
+.container {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.project_content {
+    text-align: center;
+    padding-top: 5%;
+}
