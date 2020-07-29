@@ -18,7 +18,15 @@ body {
 }
 .container {
     text-align: center;
-    padding-top: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.back-img{
+    background: url('https://images.nathan7471.xyz/q3ye86zy.png');
+    background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .project_content {
