@@ -1,117 +1,86 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Link from "next/link";
+import {faDiscord, faXTwitter, faGithub} from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import {Chip} from "@nextui-org/chip";
 
-const inter = Inter({ subsets: ['latin'] })
+function calculateAge(dob: string) {
+    var birthDate = new Date(dob);
+    var today = new Date();
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    <main className={"background"}>
+      <div className={"p-20"}>
+          <div className={"bg-white box-height relative lg:flex lg:flex-row rounded-xl"}>
+              <div className={"bg-white box-height-inner lg:absolute rounded-t-lg lg:rounded-xl lg:-top-5 lg:w-[40vw] flex flex-col justify-center content-center text-center"}>
+                  <div className={"mt-auto"}>
+                      <Image src={"/images/avatar.png"} alt={"Profile Image"} width={150} height={150} className={"rounded-full mx-auto mb-3"}/>
+                      <h1 className={"text-3xl font-bold"}>Nathan Powell</h1>
+                      <h3 className={""}>Pronouns: He/Him</h3>
+                      <p className={"text-xl text-[#194CFF]"}>Full Stack Software Engineer</p>
+                      <div className={"flex flex-row gap-3 text-center justify-center mt-2"}>
+                          <Link href={"discord://-/users/510238066829688832"}><FontAwesomeIcon icon={faDiscord as IconProp} height="50" className="text-2xl" /></Link>
+                          <Link href={"https://twitter.com/Natpow7471"}><FontAwesomeIcon icon={faXTwitter as IconProp} height="50" className="text-2xl" /></Link>
+                          <Link href={"https://github.com/mrnat7471"}><FontAwesomeIcon icon={faGithub as IconProp} height="50" className="text-2xl" /></Link>
+                      </div>
+                  </div>
+                  <div className={"mt-auto grid grid-cols-2"}>
+                      <Link href={"/"} target={"_blank"} className={"border-1 border-gray-200 lg:rounded-bl-xl"}>
+                          <p className={"p-5"}>Download CV</p>
+                      </Link>
+                      <Link href={"mailto:contact@omnibyte.tech"} className={"border-t-1 border-b-1 border-r-1 border-gray-200 lg:rounded-br-xl"}>
+                          <p className={"p-5"}>Contact Me</p>
+                      </Link>
+                  </div>
+              </div>
+              <div className={"lg:ml-[41vw] bg-white mt-5"}>
+                  <h2 className={"text-3xl font-bold underline text-black"}>About me</h2>
+                  <h3>Hello Humans 👋</h3>
+                  <p>As a passionate Full Stack Software Engineer, I bring a dynamic blend of cutting-edge technical
+                      skills and a fresh, creative approach to software development. At just {calculateAge('2002-07-07')} years old, I have
+                      already made significant strides in both front-end and back-end technologies. My journey in
+                      coding began early, allowing me to develop a deep understanding of languages such as JavaScript,
+                      TypeScript, and Python, along with frameworks like React and Node.js.<br/><br/>
+                      My experience includes building responsive and user-friendly web applications, diving deep into
+                      databases, and crafting efficient server-side algorithms. What sets me apart is my eagerness to
+                      embrace new challenges and my commitment to staying on top of industry trends. My coding is not
+                      just a profession; it’s a passion that drives me to create innovative solutions that resonate
+                      with users.</p>
+                  <div className={"text-lg mx-10 mt-5 grid-cols-2 grid"}>
+                      <p><span className={"font-bold"}>AGE...</span> {calculateAge('2002-07-07')}</p>
+                      <p><span className={"font-bold"}>RESIDENCE...</span> United Kingdom</p>
+                      <p><span className={"font-bold"}>FREELANCE...</span> <Chip color="success">Available</Chip></p>
+                      <p><span className={"font-bold"}>ADDRESS...</span> Leeds, England</p>
+                  </div>
+                  <div className={"grid grid-cols-2 mt-2 text-center border-t-1 pt-2 mr-3"}>
+                      <p>🛠 Languages & technology:<br/>
+                          - Python<br/>
+                          - Javascript<br/>
+                          - Typescript<br/>
+                          - CSS<br/>
+                          - HTML<br/>
+                          - Vue<br/>
+                      </p>
+                      <p>🛠 Frameworks:<br/>
+                          - Django<br/>
+                          - React<br/>
+                          - NuxtJS<br/>
+                          - NextJS<br/>
+                          - Electron<br/>
+                          - Tauri
+                      </p>
+                  </div>
+              </div>
+          </div>
       </div>
     </main>
   )
