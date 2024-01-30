@@ -34,7 +34,7 @@ export default function Home() {
                       </div>
                   </div>
                   <div className={"mt-auto grid grid-cols-2"}>
-                      <Link href={"/"} target={"_blank"} className={"border-1 border-gray-200 lg:rounded-bl-xl"}>
+                      <Link href={"/Nathan-Powell-CV.pdf"} target={"_blank"} className={"border-1 border-gray-200 lg:rounded-bl-xl"}>
                           <p className={"p-5"}>Download CV</p>
                       </Link>
                       <Link href={"mailto:contact@omnibyte.tech"} className={"border-t-1 border-b-1 border-r-1 border-gray-200 lg:rounded-br-xl"}>
@@ -42,7 +42,7 @@ export default function Home() {
                       </Link>
                   </div>
               </div>
-              <div className={"lg:ml-[41vw] bg-white mt-5"}>
+              <div className={"lg:ml-[41vw] bg-white mt-5 rounded-xl"}>
                   <h2 className={"text-3xl font-bold underline text-black"}>About me</h2>
                   <h3>Hello Humans 👋</h3>
                   <p>As a passionate Full Stack Software Engineer, I bring a dynamic blend of cutting-edge technical
