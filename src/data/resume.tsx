@@ -265,7 +265,6 @@ export const DATA = {
         "Next.js",
         "Typescript",
         "MySQL",
-        "Stripe",
         "TailwindCSS",
         "Python",
         "Django",
