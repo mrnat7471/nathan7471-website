@@ -193,8 +193,8 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "https://i.imgur.com/h0alkRg.png",
-      video: "",
+      image: "",
+      video: "/mogul.mp4",
     },
     {
       title: "VTC Gateway",
