@@ -170,7 +170,7 @@ export const DATA = {
     {
       title: "Mogul®",
       associated: 'Roco Technology Group',
-      role: 'Software Engineer',
+      role: 'Day 0 Software Engineer',
       href: "https://mogulsearch.com",
       dates: "Jan 2024 - Present",
       active: true,
@@ -257,7 +257,7 @@ export const DATA = {
     {
       title: "DNA Financial Solutions",
       associated: 'Roco Technology Group',
-      role: 'Software Engineer',
+      role: 'Day 0 Software Engineer',
       href: "https://dnafs.co.uk",
       dates: "Feb 2023 - Present",
       active: true,
