@@ -14,6 +14,7 @@ import Markdown from "react-markdown";
 interface Props {
   title: string;
   associated: string | null;
+  role: string
   href?: string;
   description: string;
   dates: string;
@@ -40,6 +41,7 @@ export function ProjectCard({
   image,
   video,
   links,
+    role,
   className,
 }: Props) {
   return (
@@ -75,6 +77,7 @@ export function ProjectCard({
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
+          <p className={"font-sans text-xs text-white underline"}>{role}</p>
           {associated && <p className={"font-sans text-xs text-gray-600"}>Associated with {associated}</p>}
           <time className="font-sans text-xs">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
@@ -86,7 +89,7 @@ export function ProjectCard({
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex flex-col px-2">
-        {tags && tags.length > 0 && (
+      {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <Badge

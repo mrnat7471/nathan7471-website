@@ -150,6 +150,7 @@ export default function Page() {
                   image={project.image}
                   video={project.video}
                   links={project.links}
+                  role={project.role}
                 />
               </BlurFade>
             ))}

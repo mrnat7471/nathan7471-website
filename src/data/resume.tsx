@@ -168,8 +168,38 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Mogul®",
+      associated: 'Roco Technology Group',
+      role: 'Software Engineer',
+      href: "https://mogulsearch.com",
+      dates: "Jan 2024 - Present",
+      active: true,
+      description:
+          "Mogul is a specialist finance and insurance comparison platform designed for property investors, business owners, and entrepreneurs. Beyond being a search engine for live property finance rates, Mogul offers a comprehensive decision-making tool. \n\nWith Mogul Insight, users can not only compare real-time rates but also receive detailed financial analysis, practical tips, and expert guidance from a broker’s perspective. \n\nWe believe in empowering our clients through education, offering creative strategies to help them grow and protect their wealth, ensuring they make the best-informed decisions for their investments.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "TailwindCSS",
+        "NextUI",
+        "Python",
+        "Django",
+        "Django Rest Framework"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://mogulsearch.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "https://i.imgur.com/h0alkRg.png",
+      video: "",
+    },
+    {
       title: "VTC Gateway",
       associated: 'Omnibyte Technologies',
+      role: 'Co-Founder',
       href: "https://vtcgateway.com",
       dates: "Dec 2023 - Present",
       active: true,
@@ -199,6 +229,7 @@ export const DATA = {
     {
       title: "Simulator Hits Website & Panel",
       associated: null,
+      role: 'Software Engineer Consultant',
       href: "https://simulatorhits.com",
       dates: "Jun 2023 - Present",
       active: true,
@@ -224,8 +255,38 @@ export const DATA = {
       video: "",
     },
     {
+      title: "DNA Financial Solutions",
+      associated: 'Roco Technology Group',
+      role: 'Software Engineer',
+      href: "https://dnafs.co.uk",
+      dates: "Feb 2023 - Present",
+      active: true,
+      description:
+          "DNA is a leading specialist finance and insurance brokerage in the UK, providing expert advice for both individuals and businesses. We specialise in complex residential and commercial property finance, as well as personal and corporate protection. \n\nOur skilled teams, tech-driven approach, and tailored-individual-unique solutions set us apart as pioneers in the industry.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "TailwindCSS",
+        "NextUI",
+        "Python",
+        "Django",
+        "Django Rest Framework"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://dnafs.co.uk",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/dna.mp4",
+    },
+    {
       title: "TrackSim",
       associated: 'Omnibyte Technologies',
+      role: 'Co-Founder',
       href: "https://simulatorhits.com",
       dates: "Jan 2023 - Present",
       active: true,
@@ -256,11 +317,12 @@ export const DATA = {
     {
       title: "Prime Logistics Drivers Hub",
       associated: 'Omnibyte Technologies',
+      role: 'Chief Technology Officer',
       href: "https://primevtc.com",
       dates: "Jun 2021 - Present",
       active: true,
       description:
-          "Managing and maintaining a panel for 800+ gamers and tracking and processing 1000s of events per day whilst developing new features on the backend and frontend.Managing and maintaining a panel for 800+ gamers and tracking and processing 1000s of events per day whilst developing new features on the backend and frontend.",
+          "Managing and maintaining a panel for 800+ gamers and tracking and processing 1000s of events per day whilst developing new features on the backend and frontend.",
       technologies: [
         "Next.js",
         "Typescript",
