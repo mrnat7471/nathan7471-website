@@ -110,7 +110,7 @@ export const DATA = {
       href: "https://omnibyte.tech",
       badges: [],
       location: "Remote",
-      title: "Director",
+      title: "Founder & Lead Developer",
       logoUrl: "/omnibyte.jpeg",
       start: "Feb 2022",
       end: "Present",
@@ -125,7 +125,7 @@ export const DATA = {
       title: "Software Engineer",
       logoUrl: "/roco.jpeg",
       start: "Jun 2021",
-      end: "Present",
+      end: "March 2025",
       description: "",
     },
     {
@@ -172,7 +172,7 @@ export const DATA = {
       associated: 'Roco Technology Group',
       role: 'Day 0 Software Engineer',
       href: "https://mogulsearch.com",
-      dates: "Jan 2024 - Present",
+      dates: "Jan 2024 - March 2025",
       active: true,
       description:
           "Mogul is a specialist finance and insurance comparison platform designed for property investors, business owners, and entrepreneurs. Beyond being a search engine for live property finance rates, Mogul offers a comprehensive decision-making tool. \n\nWith Mogul Insight, users can not only compare real-time rates but also receive detailed financial analysis, practical tips, and expert guidance from a broker’s perspective. \n\nWe believe in empowering our clients through education, offering creative strategies to help them grow and protect their wealth, ensuring they make the best-informed decisions for their investments.",
@@ -195,6 +195,35 @@ export const DATA = {
       ],
       image: "",
       video: "/mogul.mp4",
+    },
+    {
+      title: "Kartify",
+      associated: null,
+      role: 'Founder & Software Engineer',
+      href: "https://kartify.live",
+      dates: "Sep 2024 - Present",
+      active: true,
+      description:
+          "Kartify is a platform for logging karting lap times, tracking performance across various tracks, and viewing progression for users.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "TailwindCSS",
+        "NextUI",
+        "Python",
+        "Django",
+        "Django Rest Framework"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://kartify.live",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "https://i.imgur.com/lAT4UqF.png",
+      video: "",
     },
     {
       title: "VTC Gateway",
@@ -259,7 +288,7 @@ export const DATA = {
       associated: 'Roco Technology Group',
       role: 'Day 0 Software Engineer',
       href: "https://dnafs.co.uk",
-      dates: "Feb 2023 - Present",
+      dates: "Feb 2023 - March 2025",
       active: true,
       description:
           "DNA is a leading specialist finance and insurance brokerage in the UK, providing expert advice for both individuals and businesses. We specialise in complex residential and commercial property finance, as well as personal and corporate protection. \n\nOur skilled teams, tech-driven approach, and tailored-individual-unique solutions set us apart as pioneers in the industry.",
