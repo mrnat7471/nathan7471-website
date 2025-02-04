@@ -199,12 +199,12 @@ export const DATA = {
     {
       title: "Kartify",
       associated: null,
-      role: 'Founder & Software Engineer',
+      role: 'Software Developer',
       href: "https://kartify.live",
       dates: "Sep 2024 - Present",
       active: true,
       description:
-          "Kartify is a platform for logging karting lap times, tracking performance across various tracks, and viewing progression for users.",
+          "Kartify - Your Ultimate Karting Companion! is a platform for logging karting lap times, tracking performance across various tracks, and viewing progression for users. On an average day, we are processing between 11-19 requests per second.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -213,7 +213,9 @@ export const DATA = {
         "NextUI",
         "Python",
         "Django",
-        "Django Rest Framework"
+        "Django Rest Framework",
+        "Redis",
+        "Redis Queue"
       ],
       links: [
         {
@@ -222,7 +224,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "https://i.imgur.com/lAT4UqF.png",
+      image: "https://i.imgur.com/4WvYhqE.png",
       video: "",
     },
     {
@@ -286,7 +288,7 @@ export const DATA = {
     {
       title: "DNA Financial Solutions",
       associated: 'Roco Technology Group',
-      role: 'Day 0 Software Engineer',
+      role: 'Software Engineer',
       href: "https://dnafs.co.uk",
       dates: "Feb 2023 - March 2025",
       active: true,
