@@ -77,7 +77,7 @@ export function ProjectCard({
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <p className={"font-sans text-xs text-white underline"}>{role}</p>
+          <p className={"font-sans text-xs underline"}>{role}</p>
           {associated && <p className={"font-sans text-xs text-gray-600"}>Associated with {associated}</p>}
           <time className="font-sans text-xs">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
